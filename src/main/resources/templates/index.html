@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商品の選択</title>
+</head>
+<body>
+<h1>商品の選択</h1>
+<ul>
+  <li th:each="item : ${itemList}">
+		<a th:href="@{/item(id=${item.value.id})}">[[ ${item.value.name} ]]</a>
+	</li>
+</ul>
+<p><a href="/cart">カートを見る</a></p>
+</body>
+</html>
